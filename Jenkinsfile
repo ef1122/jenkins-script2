@@ -1,9 +1,7 @@
+properties([parameters([string(defaultValue: '4111111111111111', name: 'cardNumber')])])
 node('dev')
 {
-    def cardNumber = input(
-        id: 'userInput', message: 'Enter the VISA card number',
-        parameters: [string(defaultValue: '4111111111111111', description: 'VISA card number', name: 'CARD_NUMBER')]
-    )
+   
    stage('Get GIT repository')
    {
     git branch: 'main', url: 'https://github.com/ApasoftTraining/jenkins-scripted1.git'
