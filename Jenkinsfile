@@ -16,7 +16,7 @@ node('dev')
    }
    stage('Execute program'){
     echo 'Executing then Java program'
-    sh "mvn exec:java -Dexec.mainClass="com.apasoft.CardProcessor" -Dexec.args='${cardNumber}'"
+    sh "mvn exec:java -Dexec.mainClass='com.apasoft.CardProcessor' -Dexec.args='${cardNumber}'"
     stash includes: 'target/**', name: 'target-jar'
    }
 }
