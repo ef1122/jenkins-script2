@@ -1,4 +1,6 @@
-properties([parameters([string(defaultValue: '4111111111111111', name: 'cardNumber')])])
+
+properties(
+    [parameters([string(defaultValue: '4111111111111111', name: 'cardNumber')])])
 node('dev')
 {
    
